@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  mydjango:
+    build: ./mydjangoproject/
+    command: python ./manage.py runserver 0.0.0.0:8080
+    ports:
+      - 8080:8080
+    volumes:
+      - ./mydjangoproject/:/usr/app
